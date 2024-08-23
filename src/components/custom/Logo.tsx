@@ -29,8 +29,12 @@ export function Logo({
   dark = false,
 }: Readonly<LogoProps>) {
   return (
-    <Link className="flex items-center gap-2" href="/">
-      <MountainIcon className={"h-6 w-6  text-pink-500"} />
+    <Link 
+      href="/"
+      className="flex items-center gap-2 text-lg font-semibold md:text-base"
+      prefetch={false}
+    >
+      <img src="/logo.png" width={48} height={48} alt="image alt"/>
       <span
         className={`text-lg font-semibold ${
           dark ? "text-white" : "text-slate-900"

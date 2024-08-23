@@ -1,15 +1,18 @@
+
 import Link from "next/link";
+
 import { getUserMeLoader } from "@/data/services/get-user-me-loader";
 import { Logo } from "@/components/custom/Logo";
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import { LogoutButton } from "@/components/custom/LogoutButton";
 import { SummaryForm } from "@/components/forms/SummaryForm";
+
+import HeaderNav from "@/components/header-nav";
 
 interface AuthUserProps {
   username: string;
   email: string;
 }
-
 
 export function LoggedInUser({ userData }: { readonly userData: AuthUserProps }) {
   return (
@@ -45,19 +48,17 @@ export async function Header({ data }: Readonly<HeaderProps>) {
   console.log(user);
 
   const { logoText, ctaButton } = data;
+
   return (
-    <div className="flex items-center justify-between px-4 py-3 bg-white shadow-md dark:bg-gray-800">
+    <div className="flex items-center h-16 px-4 border-b shrink-0 md:px-6 justify-between">
       <Logo text={logoText.label} />
       {user.ok && <SummaryForm />}
-      <div className="flex items-center gap-4">
-        {user.ok ? (
-          <LoggedInUser userData={user.data} />
-        ) : (
-          <Link href={ctaButton.url}>
-            <Button>{ctaButton.label}</Button>
-          </Link>
-        )}
-      </div>
+      <HeaderNav
+        url={ctaButton.url}
+        label={ctaButton.label}
+        userImage={user.ok ? ("/llama.png"):("")}
+        ok={user.ok} />
     </div>
+    
   );
 }

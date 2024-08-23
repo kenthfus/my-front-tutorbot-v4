@@ -2,6 +2,8 @@ import { getHomePageData } from "@/data/loaders";
 
 import { HeroSection } from "@/components/custom/HeroSection";
 import { FeatureSection } from "@/components/custom/FeaturesSection";
+import { ThemeToggle } from '@/components/theme-toggle';
+
 
 function blockRenderer(block: any) {
   switch (block.__component) {
@@ -23,6 +25,7 @@ export default async function Home() {
 
   return (
     <main>
+      <ThemeToggle />
       {blocks.map((block: any) => blockRenderer(block))}
     </main>
   );
