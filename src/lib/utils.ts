@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge"
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+import { ASSIGNMENTS, PEOPLE } from '@/consts';
 
 export function flattenAttributes(data: any): any {
   // Check if data is a plain object; return as is if not
@@ -87,3 +88,19 @@ export function extractYouTubeID(urlOrID: string): string | null {
   return null;
 }
 
+export function getInitials(name: string): string {
+  let initials = name
+    .split(' ')
+    .map((n) => n[0])
+    .join('')
+    .toUpperCase();
+  return initials;
+}
+
+export function getPerson(id: string) {
+  return PEOPLE.find((person) => person.id === id);
+}
+
+export function getAssignment(id: string) {
+  return ASSIGNMENTS.find((assignment) => assignment.id === id);
+}
