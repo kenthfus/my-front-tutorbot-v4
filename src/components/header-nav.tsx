@@ -52,7 +52,7 @@ export default function HeaderNav({ url, label, userImage, ok }: iAppProps) {
                   src={userImage}
                   alt="@shadcn"
                 />
-                <AvatarFallback>??</AvatarFallback>
+                <AvatarFallback>@</AvatarFallback>
               </Avatar>
             </Button>
           </DropdownMenuTrigger>

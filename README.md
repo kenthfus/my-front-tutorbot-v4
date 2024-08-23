@@ -1,3 +1,12 @@
+
+Extend the file system of EBS volumes
+
+1. sudo lsblk
+2. sudo growpart /dev/xvda 1
+3. sudo lsblk
+4. df -hT
+5. sudo resize2fs /dev/xvda1
+
 VS Code extension
 1. ES7 + React/Redux/React - Native snippets
 2. Auto Rename Tag
