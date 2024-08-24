@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import { ArrowLeft } from 'lucide-react';
 
-import Calendar from "@/app/calendar";
+import Scheduler from "@/app/scheduler";
 
 export default function TablePage() {
   return (
@@ -21,7 +21,7 @@ export default function TablePage() {
         />
         <span>Dashboard</span>
       </Link>
-      <Calendar />
+      <Scheduler />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { usePathname } from 'next/navigation';
 
-import { Bell, Brain, Briefcase, Calendar, Home, Settings, Shell, User } from 'lucide-react';
+import { Bell, Brain, Briefcase, CalendarSearch, CalendarPlus, Home, Settings, Shell, User } from 'lucide-react';
 
 export const NavItems = () => {
   const pathname = usePathname();
@@ -41,7 +41,14 @@ export const NavItems = () => {
     {
         name: 'Calendar',
         href: '/dashboard/calendar',
-        icon: <Calendar size={20} />,
+        icon: <CalendarSearch size={20} />,
+        active: isNavItemActive(pathname, '/dashboard/calendar'),
+        position: 'top',
+    },
+    {
+        name: 'Scheduler',
+        href: '/dashboard/scheduler',
+        icon: <CalendarPlus size={20} />,
         active: isNavItemActive(pathname, '/dashboard/calendar'),
         position: 'top',
     },
