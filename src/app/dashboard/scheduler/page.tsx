@@ -6,7 +6,11 @@ import Link from 'next/link';
 
 import { ArrowLeft } from 'lucide-react';
 
-import Scheduler from "@/app/scheduler";
+//import Scheduler from "@/app/scheduler";
+
+import dynamic from 'next/dynamic'
+ 
+const NoSSR = dynamic(() => import('@/app/scheduler'), { ssr: false })
 
 export default function TablePage() {
   return (
@@ -21,7 +25,7 @@ export default function TablePage() {
         />
         <span>Dashboard</span>
       </Link>
-      <Scheduler />
+      <NoSSR />
     </div>
   );
 }
