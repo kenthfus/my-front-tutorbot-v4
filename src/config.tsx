@@ -49,7 +49,7 @@ export const NavItems = () => {
         name: 'Scheduler',
         href: '/dashboard/scheduler',
         icon: <CalendarPlus size={20} />,
-        active: isNavItemActive(pathname, '/dashboard/calendar'),
+        active: isNavItemActive(pathname, '/dashboard/scheduler'),
         position: 'top',
     },
     {
