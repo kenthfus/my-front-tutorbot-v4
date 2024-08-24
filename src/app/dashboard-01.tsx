@@ -61,37 +61,43 @@ export default function Dashboard() {
             className="flex items-center gap-2 text-lg font-semibold md:text-base"
           >
             <Package2 className="h-6 w-6" />
-            <span className="sr-only">Acme Inc</span>
+            <span className="sr-only">Tutorbot AI</span>
           </Link>
           <Link
             href="#"
-            className="text-foreground transition-colors hover:text-foreground"
+            className="text-xs text-foreground transition-colors hover:text-foreground"
           >
             Dashboard
           </Link>
           <Link
-            href="/dasboard/summaries"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            href="/dashboard/summaries"
+            className="text-xs text-muted-foreground transition-colors hover:text-foreground"
           >
             AI Summaries
           </Link>
           <Link
             href="/dashboard/notifications"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="text-xs text-muted-foreground transition-colors hover:text-foreground"
           >
             Class Notifications
           </Link>
           <Link
-            href="assignments"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            href="/dashboard/assignments"
+            className="text-xs text-muted-foreground transition-colors hover:text-foreground"
           >
             Assignments
           </Link>
           <Link
-            href="calendar"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            href="/dashboard/calendar"
+            className="text-xs text-muted-foreground transition-colors hover:text-foreground"
           >
             Calendar
+          </Link>
+          <Link
+            href="/dashboard/scheduler"
+            className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Scheduler
           </Link>
         </nav>
         <Sheet>
@@ -112,7 +118,7 @@ export default function Dashboard() {
                 className="flex items-center gap-2 text-lg font-semibold"
               >
                 <Package2 className="h-6 w-6" />
-                <span className="sr-only">Acme Inc</span>
+                <span className="sr-only">Tutorbot AI</span>
               </Link>
               <Link href="#" className="hover:text-foreground">
                 Dashboard
@@ -140,6 +146,12 @@ export default function Dashboard() {
                 className="text-muted-foreground hover:text-foreground"
               >
                 Calendar
+              </Link>
+              <Link
+                href="/dashboard/scheduler"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                Scheduler
               </Link>
             </nav>
           </SheetContent>
